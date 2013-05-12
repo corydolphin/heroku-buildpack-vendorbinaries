@@ -3,6 +3,10 @@ Heroku buildpack: Vendor Binaries
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for vendoring binaries into your project. It doesn't do anything else, so to actually compile your app you should use [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) to combine it with a real buildpack.
 
+Each vendored binary will be extracted into `/app/vendor` for organizational purposes.
+
+Potential future: including an extensible way to manage configuration variables for each binary, i.e. updating the path, etc. 
+
 Usage
 -----
 
