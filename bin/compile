@@ -18,5 +18,5 @@ mkdir -p $1/vendor
 
 while read url; do
   echo Vendoring $url | indent
-  curl $url -o - | tar -xz -C $1/vendor -f -
+  curl $url --silent -o - | tar -xz -C $1/vendor -f -
 done < $1/.vendor_urls  
